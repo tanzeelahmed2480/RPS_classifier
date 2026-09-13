@@ -1,0 +1,103 @@
+# ==========================================
+# macOS Specific (Finder metadata, etc.)
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# ==========================================
+# Python Specific
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# ==========================================
+# Environments & Virtual Environments
+# ==========================================
+# Standard Python venv
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pipenv / Poetry / PDM
+# (Note: It's generally recommended to commit Pipfile.lock/poetry.lock, 
+# but ignore the local project environments if generated inline)
+.pdm.toml
+.python-version
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/code-workspace
+
+# PyCharm / JetBrains
+.idea/
+
+# ==========================================
+# Testing / Coverage / Tools
+# ==========================================
+.htmlcov/
+.tox/
+.nosextests/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+cython_debug/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# ==========================================
+# Local Configuration Secrets
+# ==========================================
+.env.local
+.env.*.local
+
