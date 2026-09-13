@@ -4,11 +4,12 @@ from model import RPSCNN
 from Data import get_dataloaders
 import config
 
+# Train function
 def train_model(train_dir, val_dir):
-    # 1. Call get_dataloaders from data.py to load your datasets
+    # Call get_dataloaders from data.py to load your datasets
     train_loader, val_loader = get_dataloaders(train_dir, val_dir, batch_size=config.BATCH_SIZE)
 
-    # 2. Instantiate model, loss, optimizer, and scheduler
+    # Initialize model, loss, optimizer, and scheduler
     model = RPSCNN(num_classes=len(config.CLASSES)).to(config.DEVICE)
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(
@@ -34,7 +35,7 @@ def train_model(train_dir, val_dir):
             
         print(f"Learning rate: {optimizer.param_groups[0]['lr']}")
 
-        # --- Training Loop ---
+        #  Training Loop 
         model.train()
         correct_train, total_train = 0, 0
         train_batch_losses = []
@@ -61,7 +62,7 @@ def train_model(train_dir, val_dir):
         print(f"Train Loss: {epoch_train_loss:.2f}")
         print(f"Train Accuracy: {epoch_train_acc:.2f}")
 
-        # --- Validation Loop ---
+        # Validation Loop 
         model.eval()
         correct_val, total_val = 0, 0
         val_batch_losses = []
