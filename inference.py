@@ -3,6 +3,7 @@ from PIL import Image
 from Data import get_transforms
 import config
 
+# Inference function
 def predict_image(image_path, model, device=config.DEVICE):
     model.to(device)
     model.eval()
