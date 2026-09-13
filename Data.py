@@ -1,14 +1,14 @@
 from torchvision import transforms
 from torch.utils.data import DataLoader
 import config
-
+# Resizing and Scaling the images
 def get_transforms(image_size=config.IMAGE_SIZE):
     return transforms.Compose([
         transforms.Resize(image_size),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
     ])
-
+# Adding labels to the images according to their respective place
 def get_dataloaders(train_dir, val_dir, batch_size=config.BATCH_SIZE):
     transform = get_transforms()
     # Import ImageFolder locally to keep modularity flexible
