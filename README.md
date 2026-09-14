@@ -1,7 +1,3 @@
-Here is the complete text without any triple backticks or nested code blocks that cause formatting breaks. You can copy everything below in one go:
-
-==================== COPY BELOW THIS LINE ====================
-
 # RPS_classifier: Rock-Paper-Scissors Image Classification with PyTorch
 
 A PyTorch-based Convolutional Neural Network (CNN) designed to classify hand images into Rock, Paper, or Scissors. The repository RPS_classifier includes everything needed for data loading, model architecture, training with early stopping, model checkpointing, and command-line inference.
